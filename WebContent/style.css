@@ -1,0 +1,53 @@
+@charset "ISO-8859-1";
+@import "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+body{
+  margin: 0;
+  padding: 0;
+  margin-top: 0;
+  height: 100%;
+  font-family: satisfy;
+  background: url(heart.jpg);
+  background-size: cover;
+}
+h1{
+	
+    color: black;
+    left:  10%;
+    margin-top: 0;
+   
+    line-height: 1.4em;
+    padding: 0;
+    top: 0;
+}
+.txt-box{
+	display: block;
+	text-align: left;
+	text-transform: uppercase;
+	font-size: 17px;
+}
+.txt-box input, input textarea{
+	
+	width: 30%;
+	border: none;
+	font-size: 13px;
+
+
+}
+.Prediction-Box{
+	width : 85%;
+	max-width: 600 px;
+	position: absolute;
+	top: 8%;
+	left: 10%;
+	padding: 30 px 40px;
+	
+}
+.btn{
+	
+    background: black;
+    color: black;
+    display: inline-block;
+    padding: 50 px 0;
+    margin-bottom: 30px;
+    cursor: pointer;
+   }

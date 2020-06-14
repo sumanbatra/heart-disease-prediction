@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+     
+  </head>
+  <body>
+  <form action ="/heart-web-project/predict" method="GET">
+  <div class = "Prediction-Box">
+ <h1> HEART DISEASE PREDICTION</h1>
+<div class="txt-box">
+<p>
+<b><label for="age">Enter your age</label><br></b>
+<input type="number" id="age" name="age" placeholder=" Type or Speak Something" onclick="record('age')"><br>
+</p> 
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="sex"> Select the Sex</label></b>
+<select id="sex" name="sex">
+  <option value="male">Male</option>
+  <option value="female">Female</option>
+  <option value="other">Other</option>
+</select>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="chestPain"> Enter the type of Chest Pain</label><br></b>
+<input type="number" id="chestPain" name="chestPain" placeholder="Type or Speak Something"  onclick="record('chestPain')"><br>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="trestbps">Enter the Resting Blood Pressure</label><br></b>
+<input type="trestbps" id="trestbps" name="trestbps" placeholder="Type or Speak Something"  onclick="record('trestbps')"><br>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="cholestrol">Enter the Cholestrol Level</label><br></b>
+<input type="number" id="cholestrol" name="cholestrol" placeholder="Type or Speak Something"  onclick="record('cholestrol')"><br>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="fbs">Enter the fasting Blood Sugar value</label><br></b>
+<input type="number" id="fbs" name="fbs" placeholder="Type or Speak Something"  onclick="record('fbs')"><br>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="restecg">Enter your Resting Cardiographic value</label><br></b>
+<input type="number" id="restecg" name="restecg" placeholder="Type or Speak Something"  onclick="record('restecg')"><br>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="thalch">Enter your maximum heart rate</label><br></b>
+<input type="number" id="thalch" name="thalch" placeholder="Type or Speak Something"  onclick="record('thalch')"><br>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="exang">Enter your exercise induced Angina</label><br></b>
+<input type="number" id="exang" name="exang" placeholder="Type or Speak Something"  onclick="record('exang')"><br>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="slope">Enter the depression value induced by exercise</label><br></b>
+<input type="number" id="slope" name="slope" placeholder="Type or Speak Something"  onclick="record('slope')"><br>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="ca">Enter the peak value</label><br></b>
+<input type="number" id="ca" name="ca" placeholder="Type or Speak Something"  onclick="record('ca')"><br>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="oldpeak">Number of major blood vessels coloured by flouroscopy</label><br></b>
+<input type="number" id="oldpeak" name="oldpeak" placeholder="Type or Speak Something"  onclick="record('oldpeak')"><br>
+</p>
+</div>
+
+<div class="txt-box">
+<p>
+<b><label for="thal">Enter the thalassemia defect factor</label><br></b>
+<input type="number" id="thal" name="thal" placeholder="Type or Speak Something"  onclick="record('thal')"><br>
+</p>
+</div>
+
+<div class="btn">
+
+<input type="button" value="Submit">
+
+</div>
+</div>
+<!-- Below is the script for voice recognition and conversion to text-->
+    <script>
+        function record(id) {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-US";
+
+            recognition.onresult = function(event) {
+                // console.log(event);
+                document.getElementById(id).value = event.results[0][0].transcript;
+            }
+            recognition.start();
+
+        }
+    </script>
+</body>
+</html>
